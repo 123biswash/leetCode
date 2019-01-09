@@ -8,5 +8,11 @@ def sumWithoutI(arr):
             if (j!=i):
                 resultArr[i]=resultArr[i] * arr[j]
     return resultArr
+
+def recursiveMultiply(arr):
+    returnProduct=1
+    for i in arr:
+        returnProduct*=i
+    return 
 arr=[1,2,3,4,5]
 print(sumWithoutI(arr))
