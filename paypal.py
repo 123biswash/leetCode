@@ -1,5 +1,5 @@
-parse_query_params('https://google.com?a=1&b=2') # { 'a': '1', 'b': '2' }
-parse_query_params('https://google.com?a=1&b=2&cat=hello') # { 'a': '1', 'b': '2', 'cat': 'hello' }
+# parse_query_params('https://google.com?a=1&b=2') # { 'a': '1', 'b': '2' }
+# parse_query_params('https://google.com?a=1&b=2&cat=hello') # { 'a': '1', 'b': '2', 'cat': 'hello' }
 
 #returnArr=[]
 #find ? and set rest of the string to new string
@@ -17,19 +17,24 @@ def parse_query(sent):
     return returnDict
     
     
-two_sum(5, [1, 3, 2, 5]) # (1, 2)
-#for eact element, if there exists another element such that target-element=anotherElement, then return the index of element and another element as tuple
-
 def two_sum(target, numArr):
+    returnArr=[]
     #store in a set with O(1) lookup time
     setArr=set(numArr)
     #put each element of numArr in a dictionary
     for j in range(0,len(numArr)):
         anotherElement=target-numArr[j]
         if anotherElement in setArr:
-            return_tuple=(j,numArr.find(anotherElement))
-    return return_tuple
-       
+            k=numArr.index(anotherElement)
+            tempArr=[min(j,k), max(j,k)]
+            if tempArr not in returnArr:
+                returnArr.append(tempArr)
+    return returnArr
+
+print(two_sum(10, [1, 3, 2, 5]))
+# (1, 2)
+#for each element, if there exists another element such that target-element=anotherElement, then return the index of element and another element as tuple
+
     
 
 
