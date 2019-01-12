@@ -13,3 +13,20 @@ def combinationSum2(candidates, target):
     return returnArr
 
 print(combinationSum2([2,3,5,7,4,1],7))
+
+
+# def combinationSum2(candidates, target):
+#     returnArr=[]
+#     candidates.sort()
+#     i=0
+#     j=1
+#     k=len(candidates)
+#     while()
+#         j=i+1
+#         k=len(candidates)-1
+
+
+
+
+    return returnArr
+print(combinationSum2([2,3,5,7,4,1],7))
