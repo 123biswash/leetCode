@@ -1,30 +1,17 @@
-class Node:
-    def __init__(self, val):
-        self.val=val
-        self.next=None
-
-class LinkedList:
-    def __init__(self): 
-        self.head = None
-
-    def push(self, new_data): 
-        new_node = Node(new_data) 
-        new_node.next = self.head 
-        self.head = new_node
-
-    def deleteNode(self, value):
-        while(temp!=None):
-            if temp.val==value:
-                if prev:
-                    prev.next=temp.next
-                else:
-                    head = temp.next
-                return
+class ListNode:
+    def __init__(self, data=0, next_node=None):
+        self.data=data
+        self.next=next_node
+    def search_list(L, key):
+        while L and L.data!=key:
+            L=L.next
+        return L
+    def insert_after(node, new_node):
+        new_node.next=node.next
+        node.next=new_node
         return
-        curr=head
-        while(curr!=None):
-            print(curr.val)
-            curr=curr.next
-
-llist = LinkedList()
-llist.push(7)
+    def delete_after(node):
+        node.next=node.next.next
+        return
+    
+    
